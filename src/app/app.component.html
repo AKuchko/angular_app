@@ -1,3 +1,9 @@
 <div class="d-flex flex-column align-content-center justify-content-center" style="height: 100vh;">
   <heading-card [transactionsCount]="transactions.length" class="mb-5"></heading-card>
+  <div class="card-group">
+    <transaction-type-card 
+      *ngFor="let type of transactionsTypes()"
+      [transactionsCount]="filterTransactions(type).length">
+    </transaction-type-card>
+  </div>
 </div>
