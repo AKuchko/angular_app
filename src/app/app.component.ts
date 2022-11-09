@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { transactions as data } from './data/transactions';
-import { ITransactiion } from './models/transaction';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +6,5 @@ import { ITransactiion } from './models/transaction';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular_app';
-  transactions: ITransactiion[] = data
+  
 }
