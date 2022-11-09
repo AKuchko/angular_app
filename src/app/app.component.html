@@ -1,9 +1,12 @@
-<div class="d-flex flex-column align-content-center justify-content-center" style="height: 100vh;">
-  <heading-card [transactionsCount]="transactions.length" class="mb-5"></heading-card>
-  <div class="card-group">
-    <transaction-type-card 
-      *ngFor="let type of transactionsTypes()"
-      [transactionsCount]="filterTransactions(type).length">
-    </transaction-type-card>
-  </div>
+<div class="py-5" style="height: 100vh;">
+  <heading-card  class="" [transactionsCount]="transactions.length"></heading-card>
+  <div class="card-group flex-wrap m-auto justify-content-between" style="max-width: 50%;">
+  <transaction-type-card 
+  class="mt-2"
+  style="width: 49%;"
+    *ngFor="let type of transactionsTypes()"
+    [transactionsCount]="filterTransactions(type).length"
+    [transactionType]="type">
+  </transaction-type-card>
+</div>
 </div>
