@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ITransactiion } from 'src/app/models/transaction';
+import { TransactionsServiceService } from 'src/app/srvices/transactions-service.service';
 
 @Component({
   selector: 'app-navigator-page',
   templateUrl: './navigator-page.component.html',
-  styleUrls: ['./navigator-page.component.scss']
+  providers: [ TransactionsServiceService ]
 })
 export class NavigatorPageComponent implements OnInit {
-
-  constructor() { }
+  transactions: ITransactiion[];
+  transactionTypes: string[];
+  
+  constructor(private TransactionService: TransactionsServiceService) { }
 
   ngOnInit(): void {
+    this.transactions = this.TransactionService.getTransactions();
+    this.transactionTypes = this.TransactionService.getTransactionsTypes();
   }
 
 }

@@ -1,6 +1,6 @@
 export interface ITransactiion {
     _id: string,
-    amount: string,
+    amount: number,
     type: string,
     name: {
         first: string,

@@ -1,0 +1,25 @@
+<app-base-card>
+    <div class="card-header">
+        <ul class="nav nav-tabs justify-content-between">
+            <li *ngFor="let type of transactionsTypes; let i = index" class="nav-item">
+                <a [routerLink]="['/navigator']" [queryParams]="{ tab: i }" class="nav-link">{{ type }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body" style="overflow: auto;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of rows">
+                    <th>{{ row.name }}</th>
+                    <th>{{ row.amount | currency }}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</app-base-card>

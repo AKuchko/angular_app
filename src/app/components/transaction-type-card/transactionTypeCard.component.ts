@@ -7,4 +7,5 @@ import { Component, Input } from "@angular/core";
 export class TransactionTypeCard {
     @Input() transactionsCount: number;
     @Input() transactionType: string;
+    @Input() routerId: number;
 }
