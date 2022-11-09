@@ -1,12 +1,3 @@
 <div class="py-5" style="height: 100vh;">
-  <heading-card  class="" [transactionsCount]="transactions.length"></heading-card>
-  <div class="card-group flex-wrap m-auto justify-content-between" style="max-width: 50%;">
-  <transaction-type-card 
-  class="mt-2"
-  style="width: 49%;"
-    *ngFor="let type of transactionsTypes()"
-    [transactionsCount]="filterTransactions(type).length"
-    [transactionType]="type">
-  </transaction-type-card>
-</div>
+ <router-outlet></router-outlet>
 </div>
