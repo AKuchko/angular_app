@@ -3,7 +3,7 @@
     <transaction-type-card 
         class="mt-2"
         style="width: 49%;"
-        *ngFor="let type of transactionsTypes(); let i = index"
+        *ngFor="let type of transactionsTypes; let i = index"
         [transactionsCount]="filterTransactions(type).length"
         [transactionType]="type"
         [routerId]="i">

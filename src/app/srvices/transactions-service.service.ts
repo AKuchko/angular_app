@@ -12,7 +12,7 @@ export class TransactionsServiceService {
 
   constructor() { }
 
-  private filterByType(type: string) {
+  filterByType(type: string) {
     return this.transactions.filter(t => t.type === type)
   }
 
@@ -35,7 +35,7 @@ export class TransactionsServiceService {
   getFilteredTransactions(type: string) {
     let filteredTransactions = this.filterByType(type)   
     this.filter = []
-    
+
     filteredTransactions.forEach(t => {
       let name = this.parseName(t.name)      
       if (this.filter.find(el => el.name === name) && true) {
