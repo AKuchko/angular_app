@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ITransactiion } from 'src/app/models/transaction';
 import { transactions as data } from 'src/app/data/transactions';
 
@@ -7,7 +7,6 @@ import { transactions as data } from 'src/app/data/transactions';
   templateUrl: './cards-page.component.html'
 })
 export class CardsPageComponent {
-
   transactions: ITransactiion[] = data;
   transactionsTypes() {
     let types = new Array();

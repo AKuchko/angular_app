@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { transactions as data } from 'src/app/data/transactions';
+import { ITransactiion } from 'src/app/models/transaction';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+
 }
